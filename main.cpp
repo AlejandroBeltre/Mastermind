@@ -3,6 +3,7 @@
     Integrantes:
                 1115242 - Alejandro Aquiles Beltre Pimentel
                 1113810 - Henry Hermes Alburquerque Baez
+                1114331 - Erick Tejada
     Fecha: 03-08-2023
  */
 
