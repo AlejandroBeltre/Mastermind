@@ -28,7 +28,7 @@ void generadorRandom(int numeroAdivinar[4]) {
 
     bool noRepetido; //garantiza que estos digitos no se repitan utilizandolo en un while.
     int numAleatorio;
-    /*  srand() establece un punto de partida, una "semilla", para que, en base a esta, se calculen los números aleatorios
+    /* srand() establece un punto de partida, una "semilla", para que, en base a esta, se calculen los números aleatorios
        time(NULL) retorna el tiempo en segundos que ha pasado desde 1-1-1970 hasta la ejecución de la línea. */
     srand(time(NULL));
     /*este for es para crear los 4 digitos random, y dentro del creamos dos variables de tipo bool e int, además
@@ -40,7 +40,7 @@ void generadorRandom(int numeroAdivinar[4]) {
             /* rand() devuelve un numero pseudo-aleatorio que va desde el 0 hasta RAND_MAX, una constante = 32767
                Se le suma 1 debido a que el rango inferior es 0, y, se divide de forma modular entre 6 para asegurar que
                el numero a generar este dentro del rango [1,6] */
-            int contador = 0; //este contador nos ayudara a que cuando se creen cuatro numeros se rompa el while.
+            int contador = 0; //Este contador nos ayudara a que cuando se creen cuatro numeros se rompa el while.
             for(int j = 0; j < 4; j++) { //este for le suma 1 al contador cada vez que se crea un digito que no sea igual al anterior.
                 if (numAleatorio != numeroAdivinar[j]) {
                     contador++;
@@ -86,6 +86,9 @@ int main() {
     int numeroAdivinar[4] = {0, 0, 0, 0}; //Arreglo de digitos de numero a advinar.
     generadorRandom(numeroAdivinar); //Llamamos a la funcion para generar los digitos del arreglo.
     string numeros; //Los digitos introducidos del usuario.
+
+    cout << "> MasterMind" << endl;
+
     int fallos = 0; //Almacena los fallos cometidos por el usuario.
 
     for(int i = 10; i > 0; i--) { //Recorre los intentos del usuario y tiene 10 intentos.
